@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit — ИИ-планировщик учёбы (концепт)</title>
+  <meta name="description" content="Концепт-проект: планировщик, который раскладывает подготовку к ОГЭ и ЕГЭ на короткие задачи и разбирает ошибки.">
+  <meta name="theme-color" content="#191716">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Orbit — учёба по орбите, а не по хаосу">
+  <meta property="og:description" content="Концепт ИИ-планировщика учёбы: короткие задачи на орбите вокруг твоей цели.">
+  <meta property="og:url" content="https://dima1playnsk-bot.github.io/orbit-landing/">
+  <meta property="og:image" content="https://dima1playnsk-bot.github.io/orbit-landing/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span>
+  </div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="Orbit — на главную">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="6" fill="#C2A878"/>
+          <ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="#a5485e" stroke-width="1.8" transform="rotate(-25 16 16)"/>
+        </svg>
+        Orbit
+      </a>
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#day">Как выглядит</a>
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a href="#cta" class="btn btn--small btn--primary header__cta">Получить доступ</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Первый экран: интерактивная орбита -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="reveal">Учёба по&nbsp;<em>орбите</em>, а&nbsp;не&nbsp;по&nbsp;хаосу</h1>
+          <p class="hero__lead reveal">Orbit раскладывает подготовку к&nbsp;ОГЭ и&nbsp;ЕГЭ на&nbsp;короткие задачи, которые крутятся вокруг твоей цели. Сделал задачу — цель стала ближе.</p>
+          <div class="hero__actions reveal">
+            <a href="#cta" class="btn btn--primary">
+              Получить ранний доступ
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#day" class="btn btn--ghost">Как это выглядит</a>
+          </div>
+          <ul class="facts reveal">
+            <li><strong>30 минут</strong> в день</li>
+            <li><strong>7 предметов</strong> ОГЭ и ЕГЭ</li>
+            <li><strong>0 ₽</strong> чтобы начать</li>
+          </ul>
+        </div>
+
+        <div class="system reveal" id="system">
+          <span class="ring-line r1" aria-hidden="true"></span>
+          <span class="ring-line r2" aria-hidden="true"></span>
+
+          <div class="core" id="core">
+            <svg class="core__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/><circle class="core__bar" cx="50" cy="50" r="46"/></svg>
+            <div class="core__text">
+              <span class="core__label">Цель</span>
+              <strong>ЕГЭ, профиль</strong>
+              <span class="core__count">6 задач на сегодня</span>
+            </div>
+          </div>
+
+          <div class="orbit-layer layer-inner" style="--dur: 90s">
+            <div class="slot" style="--a: 0deg;   --r: var(--r1)"><div class="chip"><span class="chip__body"><i class="dot dot--wine"></i>Квадратные<br>уравнения<em>25 мин</em></span></div></div>
+            <div class="slot" style="--a: 120deg; --r: var(--r1)"><div class="chip"><span class="chip__body"><i class="dot dot--gold"></i>Задание 9,<br>русский<em>15 мин</em></span></div></div>
+            <div class="slot" style="--a: 240deg; --r: var(--r1)"><div class="chip"><span class="chip__body"><i class="dot"></i>Законы<br>Ньютона<em>30 мин</em></span></div></div>
+          </div>
+          <div class="orbit-layer layer-outer" style="--dur: 90s">
+            <div class="slot" style="--a: 60deg;  --r: var(--r2)"><div class="chip"><span class="chip__body"><i class="dot dot--gold"></i>Слова<br>на английском<em>10 мин</em></span></div></div>
+            <div class="slot" style="--a: 180deg; --r: var(--r2)"><div class="chip"><span class="chip__body"><i class="dot dot--wine"></i>Разбор<br>пробника<em>20 мин</em></span></div></div>
+            <div class="slot" style="--a: 300deg; --r: var(--r2)"><div class="chip"><span class="chip__body"><i class="dot"></i>Логарифмы<em>25 мин</em></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как выглядит приложение -->
+    <section class="section" id="day">
+      <div class="container split">
+        <div class="split__text">
+          <h2 class="reveal">Открыл — и&nbsp;сразу понятно, что делать</h2>
+          <p class="muted reveal">Никаких «с чего бы начать». На&nbsp;экране только план на&nbsp;сегодня, а&nbsp;всё остальное Orbit держит в&nbsp;голове за&nbsp;тебя.</p>
+          <ol class="points">
+            <li class="reveal"><b>План на день.</b> Три-четыре задачи, которые реально успеть.</li>
+            <li class="reveal"><b>Подсказки ИИ.</b> Замечает повторяющиеся ошибки и&nbsp;добавляет практику именно на&nbsp;них.</li>
+            <li class="reveal"><b>Прогресс.</b> Видно, сколько уже сделано сегодня.</li>
+          </ol>
+        </div>
+
+        <div class="mockup reveal">
+          <div class="mockup__top">
+            <div>
+              <p class="muted small">Сегодня, вторник</p>
+              <p class="mockup__title">План на день</p>
+            </div>
+            <div class="ring" style="--p: 66">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><circle class="ring__bar" cx="20" cy="20" r="16"/></svg>
+              <span id="ringValue">66%</span>
+            </div>
+          </div>
+          <ul class="tasks" id="tasks">
+            <li><label><input type="checkbox" checked> <span>Алгебра: квадратные уравнения</span></label><em class="tag tag--wine">25 мин</em></li>
+            <li><label><input type="checkbox" checked> <span>Русский: задание 9, практика</span></label><em class="tag tag--gold">15 мин</em></li>
+            <li><label><input type="checkbox"> <span>Физика: законы Ньютона</span></label><em class="tag">30 мин</em></li>
+          </ul>
+          <div class="ai-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>
+            <p id="aiText">В уравнениях с дискриминантом ты 3 раза ошибся в знаке. Добавил 5 задач на это.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section__title reveal">Что умеет Orbit</h2>
+
+        <div class="features">
+          <article class="feat feat--hero reveal">
+            <h3>Сам строит план до&nbsp;экзамена</h3>
+            <p>Укажи дату экзамена и&nbsp;цель по&nbsp;баллам. Orbit разложит темы по&nbsp;дням, а&nbsp;если ты&nbsp;пропустил день — тихо перестроит план, без&nbsp;упрёков.</p>
+            <div class="calendar" aria-hidden="true">
+              <i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i>
+              <i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="today"></i>
+            </div>
+          </article>
+
+          <article class="feat feat--outline reveal">
+            <svg class="feat__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            <h3>Разбор по фото</h3>
+            <p>Сфотографируй решение — Orbit покажет, в&nbsp;какой строке ошибка и&nbsp;почему.</p>
+          </article>
+
+          <ul class="feat-list reveal">
+            <li>
+              <h3>Напоминания без спама</h3>
+              <p>Одно сообщение в&nbsp;то&nbsp;время, когда ты&nbsp;обычно садишься учиться.</p>
+            </li>
+            <li>
+              <h3>Слабые темы на виду</h3>
+              <p>Темы, которые проседают, всплывают в&nbsp;плане чаще.</p>
+            </li>
+            <li>
+              <h3>Учёба с друзьями</h3>
+              <p>Общая серия дней: бросить сложнее, когда друзья видят прогресс.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как начать -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2 class="section__title reveal">Как начать</h2>
+        <ol class="timeline" id="steps">
+          <li class="reveal">
+            <span class="timeline__num">1</span>
+            <h3>Мини-тест на&nbsp;10&nbsp;минут</h3>
+            <p>Orbit узнаёт, какие темы ты&nbsp;уже знаешь, а&nbsp;какие нет.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__num">2</span>
+            <h3>План до экзамена</h3>
+            <p>Расписание с&nbsp;понятной нагрузкой на&nbsp;каждый день.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__num">3</span>
+            <h3>30 минут в день</h3>
+            <p>Короткие сессии каждый день вместо зубрёжки в&nbsp;последнюю ночь.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="pricing__head reveal">
+          <h2 class="section__title">Тарифы</h2>
+          <div class="switch" role="group" aria-label="Период оплаты">
+            <button class="switch__btn is-active" data-period="month">Месяц</button>
+            <button class="switch__btn" data-period="year">Год <em>−30%</em></button>
+          </div>
+        </div>
+        <div class="pricing">
+          <article class="price reveal">
+            <h3>Старт</h3>
+            <p class="price__value"><span data-month="0" data-year="0">0</span> ₽<small>/мес</small></p>
+            <p class="muted">Чтобы попробовать.</p>
+            <ul>
+              <li>План на 1 предмет</li>
+              <li>5 ИИ-разборов в неделю</li>
+              <li>Напоминания</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--block">Начать с Старта</a>
+          </article>
+          <article class="price price--hot reveal">
+            <span class="price__badge">Для экзамена</span>
+            <h3>Про</h3>
+            <p class="price__value"><span data-month="299" data-year="209">299</span> ₽<small>/мес</small></p>
+            <p class="muted">Всё, чтобы подготовиться.</p>
+            <ul>
+              <li>Все предметы</li>
+              <li>Безлимитные ИИ-разборы</li>
+              <li>Пробники с проверкой</li>
+              <li>Статистика по темам</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary btn--block">Попробовать Про</a>
+          </article>
+          <article class="price reveal">
+            <h3>Класс</h3>
+            <p class="price__value"><span data-month="990" data-year="690">990</span> ₽<small>/мес</small></p>
+            <p class="muted">До 30 учеников и учитель.</p>
+            <ul>
+              <li>Всё из Про</li>
+              <li>Панель учителя</li>
+              <li>Рейтинг класса</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--block">Подключить класс</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <h2 class="section__title reveal">Частые вопросы</h2>
+        <div class="faq">
+          <details class="reveal"><summary>Это заменит репетитора?</summary><p>Orbit берёт на себя план, практику и разбор типовых ошибок. Сложные темы лучше обсуждать с живым человеком — но занятий понадобится меньше.</p></details>
+          <details class="reveal"><summary>Какие предметы есть?</summary><p>Математика, русский, физика, информатика, химия, английский и обществознание.</p></details>
+          <details class="reveal"><summary>Можно отменить подписку?</summary><p>Да, в один клик в настройках. Деньги за неиспользованный период возвращаются.</p></details>
+          <details class="reveal"><summary>Работает без интернета?</summary><p>План и задачи доступны офлайн, а ИИ-разбор подтянется, когда появится сеть.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Призыв -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Выйти на&nbsp;орбиту</h2>
+          <p class="muted">Оставь почту — напишем, когда откроется ранний доступ.</p>
+          <form class="cta__form" id="form" novalidate>
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" type="email" placeholder="you@mail.ru" autocomplete="email" required>
+            <button class="btn btn--primary" type="submit">Записаться</button>
+          </form>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Orbit — концепт-проект. Продукт вымышленный, дизайн и код настоящие.<br>Сделал dimas, 2026.</p>
+      <nav aria-label="Ссылки в подвале"><a href="#day">Как выглядит</a><a href="#pricing">Тарифы</a><a href="#faq">Вопросы</a></nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
