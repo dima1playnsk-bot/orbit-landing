@@ -128,6 +128,7 @@ a { color: inherit; text-decoration: none; }
   user-select: none;
 }
 .chip__body em { grid-column: 2; font-style: normal; font-weight: 500; color: var(--muted); font-size: .9em; }
+.chip__planet { width: 24px; height: 24px; grid-row: span 2; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); grid-row: span 2; }
 .dot--wine { background: var(--wine-light); }
 .dot--gold { background: var(--gold); }
@@ -181,7 +182,21 @@ a { color: inherit; text-decoration: none; }
 .feat--hero p { color: rgba(243,237,228,.82); max-width: 460px; }
 .feat--outline { border-radius: 8px; border: 1px solid var(--gold); display: flex; flex-direction: column; justify-content: flex-end; }
 .feat--outline p { color: var(--muted); }
-.feat__icon { width: 40px; height: 40px; color: var(--gold); margin-bottom: auto; padding-bottom: 32px; box-sizing: content-box; }
+.feat__img { display: block; width: 100%; height: auto; margin: -6px 0 auto; padding-bottom: 20px; }
+
+/* Предметы-планеты */
+.section--tight { padding-top: 40px; }
+.subjects__head { max-width: 560px; margin-bottom: 40px; }
+.subjects__head .section__title { margin-bottom: 12px; }
+.planets { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; }
+.planets li { display: grid; justify-items: center; gap: 12px; text-align: center; font-weight: 600; font-size: .92rem; color: var(--muted); }
+.planets img { width: 100%; max-width: 120px; height: auto; transition: transform .5s var(--ease); }
+.planets li:hover img { transform: translateY(-6px) rotate(-6deg); }
+.planets li:hover span { color: var(--text); }
+/* у каждой планеты своё лёгкое «покачивание», чтобы ряд не двигался синхронно */
+.planets li:nth-child(odd) img { animation: bob 6s ease-in-out infinite; }
+.planets li:nth-child(even) img { animation: bob 7s ease-in-out infinite reverse; }
+@keyframes bob { 50% { translate: 0 -5px; } }
 .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 32px; max-width: 360px; }
 .calendar i { aspect-ratio: 1; border-radius: 6px; background: rgba(25,23,22,.35); }
 .calendar .on { background: rgba(226,207,166,.55); }
@@ -264,6 +279,7 @@ a { color: inherit; text-decoration: none; }
   .hero__inner, .split { grid-template-columns: 1fr; gap: 48px; }
   .system { max-width: 520px; }
   .features { grid-template-columns: 1fr; }
+  .planets { grid-template-columns: repeat(4, 1fr); row-gap: 28px; }
   .pricing { grid-template-columns: 1fr; max-width: 440px; }
 }
 @media (max-width: 760px) {
@@ -278,8 +294,13 @@ a { color: inherit; text-decoration: none; }
   .nav a { padding: 14px 16px; border-radius: 10px; }
   .nav a:hover { background: var(--surface); }
   .hero { padding-top: 112px; }
-  .system { --r2: 41cqw; }
-  .chip__body { padding: 6px 9px; column-gap: 6px; }
+  .system { --r1: 32cqw; --r2: 36cqw; }
+  .core { width: 25cqw; }
+  .chip__body { padding: 6px 8px; column-gap: 6px; font-size: .62rem; }
+  .chip__planet { width: 18px; height: 18px; }
+  .planets { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 0; }
+  .planets li { width: 24.9%; font-size: .74rem; gap: 8px; }
+  .planets img { max-width: 72px; }
   .dot { width: 6px; height: 6px; }
   .chip__body em { display: none; }
   .section { padding: 80px 0; }

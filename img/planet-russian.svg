@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#c46a80"/><stop offset=".55" stop-color="#773344"/><stop offset="1" stop-color="#3d1a22"/>
+    </radialGradient>
+    <clipPath id="c"><circle cx="60" cy="60" r="36"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="36" fill="url(#g)"/>
+  <g clip-path="url(#c)" fill="#3d1a22" opacity=".45">
+    <circle cx="44" cy="48" r="7"/><circle cx="72" cy="72" r="9"/><circle cx="78" cy="44" r="4"/><circle cx="50" cy="78" r="3.5"/>
+  </g>
+  <!-- спутник-«буква» -->
+  <circle cx="98" cy="28" r="9" fill="#C2A878"/>
+  <path d="M94 32l4-9 4 9M95.5 29h5" fill="none" stroke="#191716" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

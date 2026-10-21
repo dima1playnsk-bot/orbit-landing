@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#4a423d"/><stop offset=".6" stop-color="#2a2522"/><stop offset="1" stop-color="#191716"/>
+    </radialGradient>
+    <clipPath id="c"><circle cx="60" cy="60" r="36"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="36" fill="url(#g)" stroke="#C2A878" stroke-width="1.5"/>
+  <g clip-path="url(#c)" stroke="#C2A878" stroke-width="1" opacity=".25">
+    <path d="M24 42h72M24 54h72M24 66h72M24 78h72M42 24v72M54 24v72M66 24v72M78 24v72"/>
+  </g>
+  <path d="M50 50l-10 10 10 10M70 50l10 10-10 10M63 46l-6 28" fill="none" stroke="#e2cfa6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="94" y="20" width="12" height="12" rx="2" fill="#a5485e" transform="rotate(20 100 26)"/>
+</svg>

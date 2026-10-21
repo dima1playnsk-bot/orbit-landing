@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#d98ea0"/><stop offset=".5" stop-color="#a5485e"/><stop offset="1" stop-color="#5a2533"/>
+    </radialGradient>
+    <clipPath id="c"><circle cx="60" cy="60" r="34"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="34" fill="url(#g)"/>
+  <g clip-path="url(#c)" fill="none" stroke="#f3ede4" stroke-width="2" opacity=".35">
+    <path d="M48 40l10-6 10 6v12l-10 6-10-6z"/>
+    <path d="M68 52l10-6 10 6v12l-10 6-10-6z"/>
+    <path d="M48 64l10-6 10 6v12l-10 6-10-6z"/>
+  </g>
+  <!-- пузырьки -->
+  <circle cx="100" cy="30" r="6" fill="none" stroke="#C2A878" stroke-width="2"/>
+  <circle cx="90" cy="16" r="3.5" fill="none" stroke="#C2A878" stroke-width="2"/>
+  <circle cx="108" cy="12" r="2.5" fill="#C2A878"/>
+</svg>

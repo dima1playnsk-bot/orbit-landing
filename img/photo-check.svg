@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- тетрадный лист -->
+  <g transform="rotate(-4 150 130)">
+    <rect x="30" y="28" width="230" height="190" rx="6" fill="#efe7da"/>
+    <g stroke="#c9d6e3" stroke-width="1">
+      <path d="M30 48h230M30 68h230M30 88h230M30 108h230M30 128h230M30 148h230M30 168h230M30 188h230M30 208h230"/>
+      <path d="M50 28v190M70 28v190M90 28v190M110 28v190M130 28v190M150 28v190M170 28v190M190 28v190M210 28v190M230 28v190M250 28v190"/>
+    </g>
+    <path d="M222 28v190" stroke="#d98ea0" stroke-width="1.5"/>
+    <!-- «рукописное» решение -->
+    <g fill="none" stroke="#2b3a67" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M48 62c4-8 10-8 12 0s8 8 12 0M80 58h8M84 54v8M96 62c3-6 8-6 10 0M112 60h10M114 56h6M130 54v10"/>
+      <path d="M48 102c6-2 10 0 10 4s-6 6-10 6M66 104h10M71 99v10M84 100c4 0 8 2 8 6M98 104h10M98 108h10M116 100v12M124 100q6 6 0 12"/>
+      <path d="M48 142h12M66 136v12M72 142c4-6 10-6 12 0M92 140h10M92 144h10M110 136q8 6 0 12M122 142h14"/>
+      <path d="M48 182c4-6 10-6 12 0M68 180h10M68 184h10M86 176v12M94 182h12"/>
+    </g>
+    <!-- обведённая ошибка -->
+    <ellipse cx="92" cy="106" rx="30" ry="15" fill="none" stroke="#a5485e" stroke-width="3" stroke-dasharray="1 0"/>
+  </g>
+  <!-- подсказка ИИ -->
+  <g>
+    <path d="M146 96 L196 110" stroke="#a5485e" stroke-width="2" stroke-dasharray="4 4"/>
+    <rect x="196" y="78" width="148" height="74" rx="12" fill="#211e1c" stroke="#C2A878" stroke-width="1.5"/>
+    <path d="M214 98l2.2 5.4 5.4 2.2-5.4 2.2-2.2 5.4-2.2-5.4-5.4-2.2 5.4-2.2z" fill="#C2A878"/>
+    <rect x="228" y="96" width="98" height="7" rx="3.5" fill="#f3ede4" opacity=".85"/>
+    <rect x="228" y="111" width="82" height="7" rx="3.5" fill="#a99f93" opacity=".7"/>
+    <rect x="228" y="126" width="60" height="7" rx="3.5" fill="#a99f93" opacity=".7"/>
+  </g>
+  <!-- рамка «камеры» -->
+  <g fill="none" stroke="#e2cfa6" stroke-width="3" stroke-linecap="round">
+    <path d="M14 44V18h26M276 18h-6M14 200v26h26"/>
+  </g>
+</svg>
