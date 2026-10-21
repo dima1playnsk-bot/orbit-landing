@@ -7,7 +7,7 @@
   --gold: #C2A878;         /* состаренное золото */
   --gold-light: #e2cfa6;
   --text: #f3ede4;
-  --muted: #a99f93;
+  --muted: #c2b8ab;
   --line: rgba(194, 168, 120, 0.16);
   --surface: rgba(243, 237, 228, 0.04);
   --surface-2: rgba(243, 237, 228, 0.08);
@@ -22,8 +22,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 400 16px/1.6 var(--font-body);
-  -webkit-font-smoothing: antialiased;
+  font: 500 16px/1.6 var(--font-body);
 }
 ::selection { background: var(--wine); color: var(--text); }
 h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; margin: 0 0 .5em; letter-spacing: -0.02em; }
@@ -284,6 +283,8 @@ a { color: inherit; text-decoration: none; }
   .pricing { grid-template-columns: 1fr; max-width: 440px; }
 }
 @media (max-width: 760px) {
+  body { font-size: 17px; }
+  .core__count { font-size: .68rem; }
   .burger { display: block; margin-left: auto; }
   .header__cta { display: none; }
   .nav {
@@ -297,10 +298,10 @@ a { color: inherit; text-decoration: none; }
   .hero { padding-top: 112px; }
   .system { --r1: 32cqw; --r2: 36cqw; }
   .core { width: 25cqw; }
-  .chip__body { padding: 6px 8px; column-gap: 6px; font-size: .62rem; }
+  .chip__body { padding: 6px 8px; column-gap: 6px; font-size: .66rem; font-weight: 700; }
   .chip__planet { width: 18px; height: 18px; }
   .planets { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 0; }
-  .planets li { width: 24.9%; font-size: .74rem; gap: 8px; }
+  .planets li { width: 24.9%; font-size: .8rem; gap: 8px; }
   .planets img { max-width: 72px; }
   .dot { width: 6px; height: 6px; }
   .chip__body em { display: none; }
