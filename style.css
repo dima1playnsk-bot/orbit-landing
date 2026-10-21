@@ -146,6 +146,17 @@ a { color: inherit; text-decoration: none; }
 .points b { color: var(--text); font-weight: 700; }
 .points span { grid-column: 2; }
 
+/* Фото стола за макетом: приложение «лежит» поверх реальной обстановки */
+.day-visual { position: relative; padding-top: 120px; }
+.day-visual__photo, .day-visual::before {
+  position: absolute; top: 0; left: 0; width: 82%; height: calc(100% - 90px); border-radius: 28px;
+}
+.day-visual__photo { object-fit: cover; filter: saturate(.9) brightness(.9); }
+.day-visual::before {
+  content: ""; z-index: 1; pointer-events: none;
+  background: linear-gradient(200deg, rgba(25,23,22,.1) 30%, rgba(119,51,68,.45));
+}
+.day-visual .mockup { position: relative; z-index: 2; width: 82%; margin-left: auto; }
 .mockup {
   padding: 26px; border-radius: 24px; background: var(--bg-2); border: 1px solid var(--line);
   box-shadow: 0 40px 90px -40px rgba(0,0,0,.9);
@@ -182,7 +193,16 @@ a { color: inherit; text-decoration: none; }
 .feat--hero p { color: rgba(243,237,228,.82); max-width: 460px; }
 .feat--outline { border-radius: 8px; border: 1px solid var(--gold); display: flex; flex-direction: column; justify-content: flex-end; }
 .feat--outline p { color: var(--muted); }
-.feat__img { display: block; width: 100%; height: auto; margin: -6px 0 auto; padding-bottom: 20px; }
+/* Разбор по фото: настоящее фото тетради + пометка ИИ поверх */
+.snap { position: relative; margin: -6px 0 auto; padding-bottom: 22px; }
+.snap img { display: block; width: 100%; height: auto; aspect-ratio: 10 / 7; object-fit: cover; border-radius: 6px; filter: saturate(.9) brightness(.92); }
+.snap__mark { position: absolute; left: 30%; top: 30%; width: 34%; height: 15%; border: 2.5px solid var(--gold); border-radius: 50%; transform: rotate(-4deg); box-shadow: 0 0 0 999px rgba(25,23,22,.12); }
+.snap__hint {
+  position: absolute; left: 12px; bottom: 34px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 11px; border-radius: 10px; background: rgba(25,23,22,.88); backdrop-filter: blur(6px);
+  border-left: 3px solid var(--wine-light); font-size: .82rem; font-weight: 600;
+}
+.snap__hint svg { color: var(--gold); }
 
 /* Предметы-планеты */
 .section--tight { padding-top: 40px; }
@@ -269,6 +289,8 @@ a { color: inherit; text-decoration: none; }
 .footer p { margin: 0; }
 .footer nav { display: flex; gap: 24px; }
 .footer a:hover { color: var(--gold); }
+.credits { font-size: .78rem; opacity: .75; }
+.credits a { text-decoration: underline; }
 
 /* ===== Появление при скролле — одно спокойное движение ===== */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--ease), transform .6s var(--ease); transition-delay: var(--d, 0s); }
@@ -313,7 +335,10 @@ a { color: inherit; text-decoration: none; }
   .timeline li { padding-left: 68px; }
   .timeline__num { position: absolute; left: 0; top: 0; }
   .cta { padding: 48px 22px; }
-  .cta__form { flex-direction: column; }
+  .day-visual { padding-top: 90px; }
+  .day-visual__photo, .day-visual::before { width: 100%; height: 180px; }
+  .day-visual .mockup { width: 94%; }
+    .cta__form { flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -107,7 +107,10 @@
           </ol>
         </div>
 
-        <div class="mockup reveal">
+        <div class="day-visual reveal">
+          <img class="day-visual__photo" src="img/photos/desk-night.webp" width="1200" height="900" loading="lazy"
+               alt="Письменный стол вечером: ноутбук, книги и лампа">
+        <div class="mockup">
           <div class="mockup__top">
             <div>
               <p class="muted small">Сегодня, вторник</p>
@@ -128,6 +131,7 @@
             <p id="aiText">Ты&nbsp;3 раза ошибся в&nbsp;знаке дискриминанта. Добавил 5&nbsp;задач на&nbsp;это.</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
 
@@ -147,8 +151,15 @@
           </article>
 
           <article class="feat feat--outline reveal">
-            <img class="feat__img" src="img/photo-check.svg" width="360" height="240" loading="lazy"
-                 alt="Фото тетради с решением: ошибка во второй строке обведена, рядом подсказка ИИ">
+            <figure class="snap">
+              <img src="img/photos/notebook-check.webp" width="800" height="560" loading="lazy"
+                   alt="Листок с решёнными примерами по математике и красный карандаш">
+              <span class="snap__mark" aria-hidden="true"></span>
+              <figcaption class="snap__hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>
+                Строка 2: потерян минус
+              </figcaption>
+            </figure>
             <h3>Разбор по фото</h3>
             <p>Сфоткай решение — Orbit покажет, где ошибка и&nbsp;почему.</p>
           </article>
@@ -296,7 +307,8 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>Orbit — концепт-проект. Продукт вымышленный, дизайн и код настоящие.<br>Сделал dimas, 2026.</p>
+      <p>Orbit — концепт-проект. Продукт вымышленный, дизайн и код настоящие.<br>Сделал dimas, 2026.<br>
+        <span class="credits">Фото: Yen Vu, Chris Liverani — <a href="https://unsplash.com" rel="noopener">Unsplash</a>.</span></p>
       <nav aria-label="Ссылки в подвале"><a href="#day">Как выглядит</a><a href="#pricing">Тарифы</a><a href="#faq">Вопросы</a></nav>
     </div>
   </footer>
